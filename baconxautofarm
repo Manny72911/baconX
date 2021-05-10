@@ -1,0 +1,1016 @@
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Name = Instance.new("TextLabel")
+local Line = Instance.new("TextLabel")
+local Page1 = Instance.new("TextButton")
+local Page2 = Instance.new("TextButton")
+local Page1Frame = Instance.new("ScrollingFrame")
+local FistAutofarm = Instance.new("TextButton")
+local SilencerAutofarm = Instance.new("TextButton")
+local P90Autofarm = Instance.new("TextButton")
+local HoodKicksAutofarm = Instance.new("TextButton")
+local HospitalAutofarm = Instance.new("TextButton")
+local AutoArrest = Instance.new("TextButton")
+local ShotgunAutofarm = Instance.new("TextButton")
+local AutoArrestV2 = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local AntiKick = Instance.new("TextButton")
+local Godmode = Instance.new("TextButton")
+local AntiStomp = Instance.new("TextButton")
+local AntiRaycodexArrest = Instance.new("TextButton")
+local HomePage = Instance.new("Frame")
+local Pfp = Instance.new("ImageLabel")
+local PlayerName = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.127222985, 0, 0.174573049, 0)
+Frame.Size = UDim2.new(0, 544, 0, 343)
+Frame.Visible = false
+UICorner.Parent = Frame
+
+Name.Name = "Name"
+Name.Parent = Frame
+Name.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Name.BorderSizePixel = 0
+Name.Position = UDim2.new(0.0238970593, 0, 0.0466472283, 0)
+Name.Size = UDim2.new(0, 509, 0, 57)
+Name.Font = Enum.Font.SourceSansBold
+Name.Text = "Bacon X Autofarm"
+Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name.TextScaled = true
+Name.TextSize = 14.000
+Name.TextWrapped = true
+
+Line.Name = "Line"
+Line.Parent = Frame
+Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Line.BorderSizePixel = 0
+Line.Position = UDim2.new(0, 0, 0.297376096, 0)
+Line.Size = UDim2.new(0, 544, 0, 2)
+Line.Font = Enum.Font.SourceSans
+Line.Text = ""
+Line.TextColor3 = Color3.fromRGB(0, 0, 0)
+Line.TextSize = 14.000
+
+Page1.Name = "Page1"
+Page1.Parent = Frame
+Page1.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Page1.BorderSizePixel = 0
+Page1.Position = UDim2.new(0.0238970593, 0, 0.370262384, 0)
+Page1.Size = UDim2.new(0, 200, 0, 50)
+Page1.Font = Enum.Font.SourceSans
+Page1.Text = "Page 1"
+Page1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Page1.TextScaled = true
+Page1.TextSize = 14.000
+Page1.TextWrapped = true
+Page1.MouseButton1Down:Connect(function()
+	Page1Frame.Visible = true
+	HomePage.Visible = false
+	Page2.Visible = false
+end)
+
+Page2.Name = "Page2"
+Page2.Parent = Frame
+Page2.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Page2.BorderSizePixel = 0
+Page2.Position = UDim2.new(0.54963237, 0, 0.370262384, 0)
+Page2.Size = UDim2.new(0, 200, 0, 50)
+Page2.Font = Enum.Font.SourceSans
+Page2.Text = "Page 2"
+Page2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Page2.TextScaled = true
+Page2.TextSize = 14.000
+Page2.TextWrapped = true
+Page2.MouseButton1Down:Connect(function()
+	Page1.Visible = false
+	HomePage.Visible = false
+	Page2.Visible = true
+end)
+
+Page1Frame.Name = "Page1Frame"
+Page1Frame.Parent = Frame
+Page1Frame.Active = true
+Page1Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Page1Frame.BorderSizePixel = 0
+Page1Frame.Position = UDim2.new(0.0238970593, 0, 0.5451895, 0)
+Page1Frame.Size = UDim2.new(0, 486, 0, 146)
+Page1Frame.Visible = false
+
+FistAutofarm.Name = "FistAutofarm"
+FistAutofarm.Parent = Page1Frame
+FistAutofarm.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+FistAutofarm.BorderSizePixel = 0
+FistAutofarm.Size = UDim2.new(0, 200, 0, 50)
+FistAutofarm.Font = Enum.Font.SourceSans
+FistAutofarm.Text = "Fist Autofarm"
+FistAutofarm.TextColor3 = Color3.fromRGB(255, 255, 255)
+FistAutofarm.TextScaled = true
+FistAutofarm.TextSize = 14.000
+FistAutofarm.TextWrapped = true
+FistAutofarm.MouseButton1Down:Connect(function()
+	local plr = game.Players.LocalPlayer
+	repeat wait() until plr.Character:FindFirstChild("FULLY_LOADED_CHAR")
+	--SEAT DESTRUCTIONNNNN
+	for i,v in pairs(game.Workspace:GetDescendants()) do
+		if v:IsA("Seat") then
+			v:Destroy()
+		end
+	end
+	--anti tp anticheat
+	function DeleteAntiCheat()
+		for i,v in pairs(plr.Character:GetChildren()) do
+			if v.ClassName == "Script" and v.Name ~= "Health" then
+				v:Destroy()
+			end
+		end
+	end
+
+	plr.CharacterAdded:Connect(function(character)
+		repeat wait() until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("FULLY_LOADED_CHAR")
+		DeleteAntiCheat()
+		wait(1)
+		reset = false
+	end)
+	DeleteAntiCheat()
+	--respawn
+	local reset = false
+	spawn(function()
+		while wait() do
+			pcall(function()if plr.Character.Humanoid.Health <= 0 then reset = true end end)
+		end
+	end)
+	--antiafk
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+		game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	end)
+	--network ownership
+	game:GetService('RunService').Stepped:connect(function()
+		pcall(function()plr.Character.Humanoid:ChangeState(11)end)
+		setsimulationradius(math.huge)
+	end)
+
+	while wait(0.5) do
+		for i,v in pairs(game.Workspace.Cashiers:GetChildren()) do
+			if v.Humanoid.Health > 0 then
+				spawn(function()
+					while v.Humanoid.Health > 0 do
+						wait()
+						pcall(function()plr.Character.HumanoidRootPart.CFrame = v.Head.CFrame * CFrame.new(0, -2, 1.5)end)
+					end
+				end)
+				repeat
+					pcall(function()plr.Character.Humanoid:EquipTool(plr.Backpack.Combat)end)
+					wait(0.1)
+					pcall(function()
+						plr.Character.Combat:Activate()
+						wait(2)
+						plr.Character.Combat:Deactivate()
+						wait(1)
+					end)
+				until v.Humanoid.Health <= 0
+				wait(0.1)
+
+				for ii,vv in pairs(game.Workspace.Ignored.Drop:GetChildren()) do
+					if vv.Name ~= "MoneyDrop" then continue end
+					if (plr.Character.HumanoidRootPart.Position - vv.Position).Magnitude > 25 then continue end
+					vv.Name = "Grabbing"
+					vv.Anchored = true
+					while game.Workspace.Ignored.Drop:FindFirstChild("Grabbing") do
+						wait()
+						pcall(function()
+							plr.character.HumanoidRootPart.CFrame = vv.CFrame
+							if not reset then fireclickdetector(vv.ClickDetector) end
+						end)
+					end
+				end
+			end
+		end
+	end
+end)
+
+SilencerAutofarm.Name = "SilencerAutofarm"
+SilencerAutofarm.Parent = Page1Frame
+SilencerAutofarm.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+SilencerAutofarm.BorderSizePixel = 0
+SilencerAutofarm.Position = UDim2.new(0.557613194, 0, 0, 0)
+SilencerAutofarm.Size = UDim2.new(0, 200, 0, 50)
+SilencerAutofarm.Font = Enum.Font.SourceSans
+SilencerAutofarm.Text = "Silencer Autofarm"
+SilencerAutofarm.TextColor3 = Color3.fromRGB(255, 255, 255)
+SilencerAutofarm.TextScaled = true
+SilencerAutofarm.TextSize = 14.000
+SilencerAutofarm.TextWrapped = true
+SilencerAutofarm.MouseButton1Down:Connect(function()
+	if game.Players.LocalPlayer.Character.Animate:FindFirstChild("idle") then
+		game.Players.LocalPlayer.Character.Animate.idle:Destroy()
+	end
+	local me = game:service'Players'.LocalPlayer
+	local plr = game.Players.LocalPlayer
+	local savedarmourpos = plr.Character.HumanoidRootPart.Position
+	local toolname = "[Shotgun] - $1250"
+	plr.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.Ignored.Shop[toolname].Head.Position)
+	wait(.1)
+	fireclickdetector(game.Workspace.Ignored.Shop[toolname].ClickDetector)
+	wait(.1)
+	fireclickdetector(game.Workspace.Ignored.Shop[toolname].ClickDetector)
+	wait(.1)
+	fireclickdetector(game.Workspace.Ignored.Shop[toolname].ClickDetector)
+	wait(.1)
+	fireclickdetector(game.Workspace.Ignored.Shop[toolname].ClickDetector)
+	wait(.1)
+	fireclickdetector(game.Workspace.Ignored.Shop[toolname].ClickDetector)
+	wait(.1)
+	fireclickdetector(game.Workspace.Ignored.Shop[toolname].ClickDetector)
+	wait(.1)
+	me.Character.Humanoid:EquipTool(me.Backpack:FindFirstChild("[Shotgun]"))
+	wait(0.001)
+	plr.Character.HumanoidRootPart.CFrame = CFrame.new(savedarmourpos)
+	plr.Character.HumanoidRootPart.CFrame = CFrame.new(savedarmourpos)
+	function bypass()
+		local oh1 = CFrame.new(-346.434296, 52.5954704, 446.756989)
+		local oh2 = game:GetService("Players")
+		local oh3 = oh2.LocalPlayer.Character.HumanoidRootPart
+
+
+		oh3.CFrame = oh1
+		wait(1.5)
+	end
+	repeat
+		wait()
+	until game:IsLoaded()
+
+	if workspace.Players[game.Players.LocalPlayer.Name]:FindFirstChild("[Shotgun]") then
+		workspace.Players[game.Players.LocalPlayer.Name]:FindFirstChild("[Shotgun]").Name = "[Drxco]"
+
+		function Buy()
+			fireclickdetector(workspace.Ignored.Shop["20 [Shotgun Ammo] - $60"].ClickDetector)
+			fireclickdetector(workspace.Ignored.Shop["20 [Shotgun Ammo] - $60"].ClickDetector)
+		end
+
+		local ATM = "nil"
+		local idk = false
+		local dineros = false
+		local lol = 0
+
+		function GetATM()
+			bypass()
+			for i, v in pairs(workspace.Cashiers:GetChildren()) do
+				if v:WaitForChild("Humanoid").Health > 0 then
+					local cf = v.Open.CFrame
+					local lv = cf.lookVector
+					game.workspace.Players[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame = cf + (lv * Vector3.new(0, 0, -2))
+					game.ReplicatedStorage.MainEvent:FireServer("UpdateMousePos", v.Open.Position)
+					return v
+				end
+			end
+		end
+
+		function GETMONEY()
+			for i, v in pairs(workspace.Ignored.Drop:GetChildren()) do
+				if v.Name == "MoneyDrop" and (workspace.Players[game.Players.LocalPlayer.Name].HumanoidRootPart.Position - v.Position).Magnitude < 25
+				then
+					dineros = true
+					fireclickdetector(v.ClickDetector)
+					wait(0.7)
+					dineros = false
+				end
+			end
+		end
+
+		ATM = GetATM()
+
+		function reload(name, gun)
+			local XD1 = "Reload"
+			local XD2 = game:GetService("Workspace").Players[name][gun]
+			local Event = game:GetService("ReplicatedStorage").MainEvent
+			Event:FireServer(XD1, XD2)
+		end
+		game:GetService("RunService").Heartbeat:Connect(function()
+			GETMONEY()
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+			if lol == 0 and dineros == false then
+				if game.Players.LocalPlayer.DataFolder.Inventory["[Shotgun]"].Value == "0" and idk == false then
+					lol = 10
+					idk = true
+					local part = workspace.Ignored.Shop["20 [Shotgun Ammo] - $60"].Head
+					game.workspace.Players[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame =
+						CFrame.new(part.CFrame.X, part.CFrame.Y + 4, part.CFrame.Z)
+					game.workspace.Players[game.Players.LocalPlayer.Name]["[Drxco]"].Parent =
+						game.Players.LocalPlayer.Backpack
+					wait(2)
+					for i = 1, 10 do
+						game.workspace.Players[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame =
+							CFrame.new(
+								part.CFrame.X + math.random(1, 2),
+								part.CFrame.Y + math.random(1, 2),
+								part.CFrame.Z + math.random(1, 2)
+							)
+						Buy()
+						wait(0.5)
+					end
+					game.Players.LocalPlayer.Backpack["[Drxco]"].Parent =
+						game.workspace.Players[game.Players.LocalPlayer.Name]
+					lol = 0
+					idk = false
+					local cf = ATM.Open.CFrame
+					local lv = cf.lookVector
+					game.workspace.Players[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame =
+						cf + (lv * Vector3.new(0, 0, -2))
+				end
+				if
+					game.workspace.Players[game.Players.LocalPlayer.Name]:WaitForChild("[Drxco]").Ammo.Value == 4 and
+						idk == false
+				then
+					idk = true
+					reload(game.Players.LocalPlayer.Name, "[Drxco]")
+					wait(0.5)
+					idk = false
+				else
+					for i, v in pairs(workspace.Cashiers:GetChildren()) do
+						if v:WaitForChild("Humanoid").Health > 0 then
+							if idk == false then
+								if ATM.Humanoid.Health > 0 then
+									game:GetService("VirtualUser"):Button1Down(Vector2.new(0, 0, 0))
+									local cf = ATM.Open.CFrame
+									local lv = cf.lookVector
+									game.workspace.Players[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame =
+										cf + (lv * Vector3.new(0, 0, -2))
+								end
+							end
+						end
+					end
+				end
+				for i, v in pairs(workspace.Cashiers:GetChildren()) do
+					if v:WaitForChild("Humanoid").Health > 0 then
+						if ATM.Humanoid.Health < 0 and idk == false then
+							lol = 10
+							wait(0.1)
+							if idk == false then
+								local cf = ATM.Open.CFrame
+								local lv = cf.lookVector
+								game.workspace.Players[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame =
+									cf + (lv * Vector3.new(0, 0, -2))
+
+								ATM = GetATM()
+							end
+							lol = 0
+						end
+					end
+				end
+			end
+		end)
+	end
+end)
+
+P90Autofarm.Name = "P90Autofarm"
+P90Autofarm.Parent = Page1Frame
+P90Autofarm.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+P90Autofarm.BorderSizePixel = 0
+P90Autofarm.Position = UDim2.new(0.557613194, 0, 0.0976676419, 0)
+P90Autofarm.Size = UDim2.new(0, 200, 0, 50)
+P90Autofarm.Font = Enum.Font.SourceSans
+P90Autofarm.Text = "P90 Autofarm"
+P90Autofarm.TextColor3 = Color3.fromRGB(255, 255, 255)
+P90Autofarm.TextScaled = true
+P90Autofarm.TextSize = 14.000
+P90Autofarm.TextWrapped = true
+P90Autofarm.MouseButton1Down:Connect(function()
+	local plr = game.Players.LocalPlayer
+	plr.Character.Humanoid:UnequipTools()
+	if not plr.Backpack:FindFirstChild("[P90]") then repeat  wait() plr.Character.HumanoidRootPart.CFrame = game.Workspace.Ignored.Shop["[P90] - $1000"].Head.CFrame fireclickdetector(Workspace.Ignored.Shop["[P90] - $1000"].ClickDetector) until plr.Backpack:FindFirstChild("[P90]") end
+	plr.Character.Humanoid:EquipTool(plr.Backpack["[P90]"])
+	local gun = plr.Character:FindFirstChildOfClass("Tool")
+	gun.Name = "poggers"
+
+	repeat wait() until plr.Character:FindFirstChild("FULLY_LOADED_CHAR")
+	--SEAT DESTRUCTIONNNNN
+	for i,v in pairs(game.Workspace:GetDescendants()) do
+		if v:IsA("Seat") then
+			v:Destroy()
+		end
+	end
+	--anti tp anticheat
+	function DeleteAntiCheat()
+		for i,v in pairs(plr.Character:GetChildren()) do
+			if v.ClassName == "Script" and v.Name ~= "Health" then
+				v:Destroy()
+			end
+		end
+	end
+
+	plr.CharacterAdded:Connect(function(character)
+		repeat wait() until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("FULLY_LOADED_CHAR")
+		DeleteAntiCheat()
+		wait(1)
+		reset = false
+	end)
+	DeleteAntiCheat()
+	--respawn
+	local reset = false
+	spawn(function()
+		while wait() do
+			pcall(function()if plr.Character.Humanoid.Health <= 0 then reset = true end end)
+		end
+	end)
+	--antiafk
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+		game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	end)
+	--network ownership
+	game:GetService('RunService').Stepped:connect(function()
+		pcall(function()plr.Character.Humanoid:ChangeState(11)end)
+		setsimulationradius(math.huge)
+	end)
+
+	while wait(0.5) do
+		for i,v in pairs(game.Workspace.Cashiers:GetChildren()) do
+			if v.Humanoid.Health > 0 then
+				spawn(function()
+					while v.Humanoid.Health > 0 do
+						wait()
+						pcall(function()plr.Character.HumanoidRootPart.CFrame = v.Head.CFrame * CFrame.new(0.3, -3.7, 3.4)end)
+					end
+				end)
+				repeat
+					pcall(function()plr.Character.Humanoid:EquipTool(plr.Backpack.poggers)end)
+					wait(0.5)
+					if gun.Ammo.Value == 0 then 
+						if plr.DataFolder.Inventory["[P90]"].Value == "0" then
+							repeat wait()
+								plr.Character.HumanoidRootPart.CFrame = game.Workspace.Ignored.Shop["120 [P90 Ammo] - $60"].Head.CFrame
+								fireclickdetector(Workspace.Ignored.Shop["120 [P90 Ammo] - $60"].ClickDetector)
+								plr.Character.Humanoid:UnequipTools()
+							until tonumber(plr.DataFolder.Inventory["[P90]"].Value) >= 1000
+						else
+							game.ReplicatedStorage.MainEvent:FireServer("Reload", gun)
+							repeat wait() until gun.Ammo ~= 0
+						end
+					else
+						pcall(function()
+							game.ReplicatedStorage.MainEvent:FireServer("UpdateMousePos", v.Head.Position)
+							wait()
+							gun:Activate()
+							repeat wait() until v.Humanoid.Health <= 0 or gun.Ammo.Value == 0
+							gun:Deactivate()
+							wait(0.1)
+						end)
+					end
+					wait(0.1)
+				until v.Humanoid.Health <= 0
+
+				for ii,vv in pairs(game.Workspace.Ignored.Drop:GetChildren()) do
+					wait(0.2)
+					if vv.Name ~= "MoneyDrop" then continue end
+					if (plr.Character.HumanoidRootPart.Position - vv.Position).Magnitude > 25 then continue end
+					vv.Name = "Grabbing"
+					vv.Anchored = true
+					while game.Workspace.Ignored.Drop:FindFirstChild("Grabbing") do
+						wait()
+						pcall(function()
+							plr.character.HumanoidRootPart.CFrame = vv.CFrame
+							if not reset then fireclickdetector(vv.ClickDetector) end
+						end)
+					end
+				end
+			end
+		end
+	end
+end)
+
+HoodKicksAutofarm.Name = "HoodKicksAutofarm"
+HoodKicksAutofarm.Parent = Page1Frame
+HoodKicksAutofarm.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+HoodKicksAutofarm.BorderSizePixel = 0
+HoodKicksAutofarm.Position = UDim2.new(0, 0, 0.0976676419, 0)
+HoodKicksAutofarm.Size = UDim2.new(0, 200, 0, 50)
+HoodKicksAutofarm.Font = Enum.Font.SourceSans
+HoodKicksAutofarm.Text = "Hood Kicks Autofarm"
+HoodKicksAutofarm.TextColor3 = Color3.fromRGB(255, 255, 255)
+HoodKicksAutofarm.TextScaled = true
+HoodKicksAutofarm.TextSize = 14.000
+HoodKicksAutofarm.TextWrapped = true
+HoodKicksAutofarm.MouseButton1Down:Connect(function()
+	game.RunService.Stepped:Connect(function()
+		fireclickdetector(game:GetService("Workspace").Ignored["Clean the shoes on the floor and come to me for cash"].ClickDetector)
+		for i, v in pairs(workspace.Ignored.Drop:GetChildren()) do
+			if v.Transparency == 0 and v:IsA("MeshPart") then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Position = v.Position
+				wait()
+				fireclickdetector(v.ClickDetector)
+			end
+		end
+	end)
+end)
+
+HospitalAutofarm.Name = "HospitalAutofarm"
+HospitalAutofarm.Parent = Page1Frame
+HospitalAutofarm.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+HospitalAutofarm.BorderSizePixel = 0
+HospitalAutofarm.Position = UDim2.new(0, 0, 0.199708462, 0)
+HospitalAutofarm.Size = UDim2.new(0, 200, 0, 50)
+HospitalAutofarm.Font = Enum.Font.SourceSans
+HospitalAutofarm.Text = "Hospital Autofarm"
+HospitalAutofarm.TextColor3 = Color3.fromRGB(255, 255, 255)
+HospitalAutofarm.TextScaled = true
+HospitalAutofarm.TextSize = 14.000
+HospitalAutofarm.TextWrapped = true
+HospitalAutofarm.MouseButton1Down:Connect(function()
+	game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(116.618, 22.799, -479.274)
+	local job = game:GetService("Workspace").Ignored.HospitalJob
+	while true do
+		wait(3)
+		if job:FindFirstChild('Can I get the Red bottle') then 
+			fireclickdetector(game:GetService("Workspace").Ignored.HospitalJob.Red.ClickDetector)
+			wait(.1)
+			fireclickdetector(game:GetService("Workspace").Ignored.HospitalJob["Can I get the Red bottle"].ClickDetector)
+
+		elseif job:FindFirstChild('Can I get the Green bottle') then
+			fireclickdetector(game:GetService("Workspace").Ignored.HospitalJob.Green.ClickDetector)
+			wait(.1)
+			fireclickdetector(game:GetService("Workspace").Ignored.HospitalJob["Can I get the Green bottle"].ClickDetector)
+		elseif job:FindFirstChild('Can I get the Blue bottle') then
+			fireclickdetector(game:GetService("Workspace").Ignored.HospitalJob.Blue.ClickDetector)
+			wait(.1)
+			fireclickdetector(game:GetService("Workspace").Ignored.HospitalJob["Can I get the Blue bottle"].ClickDetector)
+
+		end
+	end 
+end)
+
+AutoArrest.Name = "AutoArrest"
+AutoArrest.Parent = Page1Frame
+AutoArrest.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+AutoArrest.BorderSizePixel = 0
+AutoArrest.Position = UDim2.new(0.557613194, 0, 0.199708462, 0)
+AutoArrest.Size = UDim2.new(0, 200, 0, 50)
+AutoArrest.Font = Enum.Font.SourceSans
+AutoArrest.Text = "AutoArrest"
+AutoArrest.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoArrest.TextScaled = true
+AutoArrest.TextSize = 14.000
+AutoArrest.TextWrapped = true
+AutoArrest.MouseButton1Down:Connect(function()
+	wait(0.5); if _G.AutoArrest == false or game.PlaceId ~= 2788229376 then return else repeat wait() until game.Players.LocalPlayer end
+
+	wait(15)
+	for i, v in next, game.Workspace:GetDescendants() do
+		if v:IsA("Seat") then
+			v:Destroy()
+		end
+	end
+	local Plr = game.Players.LocalPlayer
+
+	function serverhop()
+		print("PENIS")
+		Plr:Destroy()
+		local x = {}
+		for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
+			if type(v) == "table" and v.maxPlayers > v.playing and v.id ~= game.JobId then
+				x[#x + 1] = v.id
+			end
+		end
+		if #x > 0 then
+			game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, x[math.random(1, #x)])
+		end
+	end
+
+	spawn(function()
+		wait(300)
+		serverhop()
+	end)
+
+	game:GetService("RunService").Stepped:connect(function()
+		Plr.Character.Humanoid:ChangeState(11)
+	end)
+	Plr.CharacterAdded:Connect(function(character)
+		repeat wait() until character:FindFirstChild("FULLY_LOADED_CHAR")
+		e(character)
+	end)
+	function e(character)
+		for i, v in pairs(game.Workspace.Ignored.ItemsDrop:GetChildren()) do
+			if v:FindFirstChild("[Knife]") and Plr.Character:FindFirstChild("[Knife]") == nil and Plr.Backpack:FindFirstChild("[Knife]") == nil then
+				Plr.Character.HumanoidRootPart.CFrame = v.CFrame
+				wait(1)
+			end
+		end
+		for i, v in pairs(character:GetChildren()) do
+			if v:FindFirstChild("LocalScript") then
+				v:Destroy()
+			end
+		end
+	end
+	e(Plr.character)
+	local target
+	while wait() do
+		target = nil
+		local highest = 0
+		for i, v in pairs(game.Players:GetPlayers()) do
+			if v:FindFirstChild("DataFolder") and v.Character:FindFirstChild("FULLY_LOADED_CHAR") and v.Character.BodyEffects:FindFirstChild("Defense") and tonumber(v.DataFolder.Information.Wanted.Value) > 500 and tonumber(v.DataFolder.Information.Wanted.Value) >= highest and v.Character.BodyEffects:FindFirstChild("Armor") then
+				target = v 
+				highest = tonumber(v.DataFolder.Information.Wanted.Value)
+			end
+		end
+		if not target then serverhop() end
+		local e = true
+		local penis = 0
+		local bagged = false
+		local A = false
+		spawn(function() pcall(function()
+				while bagged == false do
+					if target and target.Character and target.Character:FindFirstChild("Christmas_Sock") == nil and penis <= 5 and Plr.Character.Humanoid.Health > 80 then
+						if Plr.Backpack:FindFirstChild("[BrownBag]") == nil then
+							A = false
+							pcall(function()
+								repeat wait()
+									Plr.character.HumanoidRootPart.CFrame = CFrame.new(-316.034454, 48.2788467, -723.860474, 0.983254969, -0.000297372608, -0.182234928, 0.000218386791, 0.999999881, -0.000453495246, 0.182235047, 0.000406103791, 0.98325491)
+									fireclickdetector(game:GetService("Workspace").Ignored.Shop["[BrownBag] - $25"].ClickDetector)
+								until Plr.Backpack:FindFirstChild("[BrownBag]") ~= nil
+							end)
+							A = true
+						end
+						Plr.Character.Humanoid:EquipTool(Plr.Backpack["[BrownBag]"])
+						Plr.Character["[BrownBag]"]:Activate()
+						penis = penis + 1
+					elseif penis >= 2 or target.Character:FindFirstChild("Christmas_Sock") or not target then
+						bagged = true
+					end
+					wait(3)
+				end
+			end) end)
+		spawn(function()
+			while e do wait()
+				pcall(function()
+					if Plr.Character.Humanoid.Health > 80 then
+						if not target.Character.BodyEffects["K.O"].Value then
+							if A then
+								Plr.Character.HumanoidRootPart.CFrame = CFrame.new(target.Character.UpperTorso.Position + Vector3.new(0, -5, 0))
+							end
+						else
+							Plr.Character.HumanoidRootPart.CFrame = target.Character.UpperTorso.CFrame
+						end
+					else
+						Plr.Character.HumanoidRootPart.CFrame = CFrame.new(0, 999, 0)
+						if Plr.Character:FindFirstChild("[Chicken]") == nil or Plr.Backpack:FindFirstChild("[Chicken]") == nil then
+							Plr.Character.HumanoidRootPart.CFrame = game.Workspace.Ignored.Shop["[Chicken] - $7"].Head.CFrame
+							wait(0.5)
+							fireclickdetector(game.Workspace.Ignored.Shop["[Chicken] - $7"].ClickDetector)
+						end
+						pcall(function()Plr.Character.Humanoid:EquipTool(Plr.Backpack["[Chicken]"])end)
+						pcall(function()
+							Plr.Character["[Chicken]"]:Activate()
+							wait(0.1)
+							Plr.Character["[Chicken]"]:Deactivate()
+						end)
+					end
+				end)
+			end
+		end)
+		repeat wait() until bagged
+		pcall(function()
+			repeat wait()
+				repeat wait()
+					pcall(function()
+						if Plr.Character.Humanoid.Health > 80 then
+							pcall(function()Plr.Character.Humanoid:EquipTool(Plr.Backpack["[Knife]"])end)
+							wait(0.1)
+							Plr.Character["[Knife]"].GripPos = Vector3.new(0, 5, 0)
+							Plr.Character["[Knife]"].Handle.Size = Vector3.new(20, 20, 20)
+							Plr.Character["[Knife]"]:Activate()
+							wait(2)
+							Plr.Character["[Knife]"]:Deactivate()
+							wait(1)
+						end
+					end)
+				until not target or target.Character.BodyEffects["K.O"].Value or game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.V)
+				repeat wait() 
+					if Plr.Character.Humanoid.Health > 80 then
+						pcall(function()Plr.Character.Humanoid:EquipTool(Plr.Backpack.Cuff)end)
+						pcall(function()
+							Plr.Character.Cuff:Activate()
+							wait(0.1)
+							Plr.Character.Cuff:Deactivate()
+						end)
+					end
+				until not target.Character.BodyEffects["K.O"].Value or game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.V)
+			until tonumber(target.DataFolder.Information.Wanted.Value) == 0 or game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.V)
+		end)
+		e = false
+	end
+end)
+
+ShotgunAutofarm.Name = "ShotgunAutofarm"
+ShotgunAutofarm.Parent = Page1Frame
+ShotgunAutofarm.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+ShotgunAutofarm.BorderSizePixel = 0
+ShotgunAutofarm.Position = UDim2.new(0, 0, 0.28862974, 0)
+ShotgunAutofarm.Size = UDim2.new(0, 200, 0, 50)
+ShotgunAutofarm.Font = Enum.Font.SourceSans
+ShotgunAutofarm.Text = "Shotgun Autofar "
+ShotgunAutofarm.TextColor3 = Color3.fromRGB(255, 255, 255)
+ShotgunAutofarm.TextScaled = true
+ShotgunAutofarm.TextSize = 14.000
+ShotgunAutofarm.TextWrapped = true
+ShotgunAutofarm.MouseButton1Down:Connect(function()
+	_G.savedhumanoidpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+	pcall(function()
+		for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v.Name == '[Shotgun] - $1250' then
+				v.Parent = game.Players.LocalPlayer.Character
+			end
+		end
+	end)
+	wait(.9)
+	local targetpos = CFrame.new(-804.820984, -39.6492004, -940.633728)
+	local plr = game.Players.LocalPlayer
+	local pos = plr.Character.HumanoidRootPart.Position
+	if not game.Players.LocalPlayer.Character:FindFirstChild("[Shotgun] - $1250") then
+		plr.Character.HumanoidRootPart.CFrame = targetpos
+		local cd = game:GetService("Workspace").Ignored.Shop["[Shotgun] - $1250"]:FindFirstChild("ClickDetector")
+		wait(.9)
+		fireclickdetector(cd)
+		wait(.9)
+		fireclickdetector(cd)
+		wait(.4)
+	end
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(_G.savedhumanoidpos)
+end)
+
+AutoArrestV2.Name = "AutoArrestV2"
+AutoArrestV2.Parent = Page1Frame
+AutoArrestV2.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+AutoArrestV2.BorderSizePixel = 0
+AutoArrestV2.Position = UDim2.new(0.557613194, 0, 0.28862974, 0)
+AutoArrestV2.Size = UDim2.new(0, 200, 0, 50)
+AutoArrestV2.Font = Enum.Font.SourceSans
+AutoArrestV2.Text = "AutoArrest V2"
+AutoArrestV2.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoArrestV2.TextScaled = true
+AutoArrestV2.TextSize = 14.000
+AutoArrestV2.TextWrapped = true
+AutoArrestV2.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Arrest"), true))()
+end)
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.011029412, 0, 0.536443114, 0)
+ScrollingFrame.Size = UDim2.new(0, 522, 0, 153)
+ScrollingFrame.Visible = false
+
+AntiKick.Name = "AntiKick"
+AntiKick.Parent = ScrollingFrame
+AntiKick.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+AntiKick.BorderSizePixel = 0
+AntiKick.Size = UDim2.new(0, 200, 0, 50)
+AntiKick.Font = Enum.Font.SourceSans
+AntiKick.Text = "Anti-Kick"
+AntiKick.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiKick.TextScaled = true
+AntiKick.TextSize = 14.000
+AntiKick.TextWrapped = true
+AntiKick.MouseButton1Down:Connect(function()
+	local a = getrawmetatable(game)
+	local sucks = a.__namecall
+	local player = game.Players.LocalPlayer
+	setreadonly(a, false)
+	a.__namecall = newcclosure(function(name, ...)
+		local tabs = {
+			...
+		}
+		if getnamecallmethod() == "FireServer" and tostring(name) == "MainEvent" then
+			if tabs[1] == "CHECKER_1" or tabs[1] == "TeleportDetect" or tabs[1] == "OneMoreTime" then
+				return wait(9e9)
+			end
+		end
+		if getnamecallmethod() == "Kick" then
+			return wait(9e9)
+		end
+		return sucks(name, unpack(tabs))
+	end)
+	setreadonly(a, true)
+end)
+
+Godmode.Name = "Godmode"
+Godmode.Parent = ScrollingFrame
+Godmode.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Godmode.BorderSizePixel = 0
+Godmode.Position = UDim2.new(0.57854408, 0, 0, 0)
+Godmode.Size = UDim2.new(0, 200, 0, 50)
+Godmode.Font = Enum.Font.SourceSans
+Godmode.Text = "Godmode"
+Godmode.TextColor3 = Color3.fromRGB(255, 255, 255)
+Godmode.TextScaled = true
+Godmode.TextSize = 14.000
+Godmode.TextWrapped = true
+Godmode.MouseButton1Down:Connect(function()
+	local name = game.Players.LocalPlayer.Name
+	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	game.Players.LocalPlayer.Character:ClearAllChildren()
+	local lol =    game.Workspace:WaitForChild(name)
+	local money = Instance.new("Folder",game.Players.LocalPlayer.Character);money.Name = "FULLY_LOADED_CHAR"
+	lol.Parent = game.Workspace.Players
+	game.Players.LocalPlayer.Character:WaitForChild("BodyEffects")
+	game.Players.LocalPlayer.Character.BodyEffects.BreakingParts:Destroy()
+end)
+
+AntiStomp.Name = "AntiStomp"
+AntiStomp.Parent = ScrollingFrame
+AntiStomp.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+AntiStomp.BorderSizePixel = 0
+AntiStomp.Position = UDim2.new(0.57854408, 0, 0.150145769, 0)
+AntiStomp.Size = UDim2.new(0, 200, 0, 50)
+AntiStomp.Font = Enum.Font.SourceSans
+AntiStomp.Text = "AntiStomp"
+AntiStomp.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiStomp.TextScaled = true
+AntiStomp.TextSize = 14.000
+AntiStomp.TextWrapped = true
+AntiStomp.MouseButton1Down:Connect(function()
+	pcall(function() if tostring(game.PlaceId) == "2788229376" then local corepackages = game:GetService"CorePackages" local localplayer = game:GetService"Players".LocalPlayer local run = game:GetService"RunService" run:BindToRenderStep("rrrrrrrrrrr",2000,function() pcall(function() if localplayer.Character.Humanoid.Health <= 30 then localplayer.Character.Humanoid:UnequipTools() localplayer.Character.Humanoid:Destroy() workspace.CurrentCamera.CameraSubject = localplayer.Character wait() local prt = Instance.new("Model", corepackages); Instance.new("Part", prt).Name="Torso"; Instance.new("Part", prt).Name="Head"; Instance.new("Humanoid", prt).Name="Humanoid"; localplayer.Character=prt end end) pcall(function() if localplayer.Character.Humanoid.FloorMaterial == "Plastic" then ReplicatedStorage:FireServer("Stomp") end end) end) loadstring(game:HttpGet("https://pastebin.com/raw/MQ3wc7Zq", true))() end end)
+end)
+
+AntiRaycodexArrest.Name = "AntiRaycodexArrest"
+AntiRaycodexArrest.Parent = ScrollingFrame
+AntiRaycodexArrest.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+AntiRaycodexArrest.BorderSizePixel = 0
+AntiRaycodexArrest.Position = UDim2.new(3.31783667e-08, 0, 0.150145769, 0)
+AntiRaycodexArrest.Size = UDim2.new(0, 200, 0, 50)
+AntiRaycodexArrest.Font = Enum.Font.SourceSans
+AntiRaycodexArrest.Text = "AntiRaycodexArrest By: draxe#5647"
+AntiRaycodexArrest.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiRaycodexArrest.TextScaled = true
+AntiRaycodexArrest.TextSize = 14.000
+AntiRaycodexArrest.TextWrapped = true
+AntiRaycodexArrest.MouseButton1Down:Connect(function()
+	local Player = game.Players.LocalPlayer
+	Player.Character:FindFirstChild("BodyEffects"):FindFirstChild("Defense"):Destroy();
+	while wait() do
+		pcall(function()
+			if game.Players.LocalPlayer.Backpack:FindFirstChild("Combat") then
+				game.Players.LocalPlayer.Backpack:FindFirstChild("Combat").Parent = game.Players.LocalPlayer.Character
+			end
+			wait()
+			game.Players.LocalPlayer.Character:FindFirstChild("Combat"):Activate()
+			if game.Players.LocalPlayer.Character then
+				if game.Players.LocalPlayer.character:FindFirstChild("HumanoidRootPart") then
+					returnpos = game.Players.LocalPlayer.character:FindFirstChild("HumanoidRootPart").CFrame
+				end
+			end    
+			wait(1.1)
+
+			for i,v in pairs(game.Players:GetChildren()) do
+				if v.Name ~= game.Players.LocalPlayer.Name and v.Name ~= "Vortextures" and v.Name ~= "Vortexturize" and v.Name ~= "Vortexturable" then
+					if v.Character then
+						if v.Character:FindFirstChild("HumanoidRootPart") then
+							distance = game.Players.LocalPlayer:DistanceFromCharacter(v.Character.HumanoidRootPart.Position)
+
+							if distance < 35 then
+								for i = 1,5 do
+									if v then
+										if v.Character and game.Players.LocalPlayer.Character then
+											if v.Character:FindFirstChild("HumanoidRootPart") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Character.Humanoid.Health > 10 then
+												game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = v.Character:FindFirstChild("HumanoidRootPart").CFrame * CFrame.new(0,0,0.7)
+											end
+										end
+									end
+									game.Workspace.CurrentCamera.CFrame = CFrame.new(game.Workspace.CurrentCamera.CFrame.p, v.Character.HumanoidRootPart.CFrame.p)
+									wait(0.05)
+								end
+
+							end
+
+						end
+					end
+				end
+			end
+		end)
+	end
+end)
+
+HomePage.Name = "HomePage"
+HomePage.Parent = Frame
+HomePage.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+HomePage.BorderSizePixel = 0
+HomePage.Position = UDim2.new(0.0238970593, 0, 0.539358616, 0)
+HomePage.Size = UDim2.new(0, 486, 0, 148)
+
+Pfp.Name = "Pfp"
+Pfp.Parent = HomePage
+Pfp.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Pfp.BorderColor3 = Color3.fromRGB(55, 55, 55)
+Pfp.BorderSizePixel = 10
+Pfp.Position = UDim2.new(0.432098776, 0, 0.0743243247, 0)
+Pfp.Size = UDim2.new(0, 65, 0, 62)
+Pfp.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+PlayerName.Name = "PlayerName"
+PlayerName.Parent = HomePage
+PlayerName.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+PlayerName.BorderColor3 = Color3.fromRGB(55, 55, 55)
+PlayerName.BorderSizePixel = 0
+PlayerName.Position = UDim2.new(0.292181075, 0, 0.621621609, 0)
+PlayerName.Size = UDim2.new(0, 200, 0, 50)
+PlayerName.Font = Enum.Font.SourceSansBold
+PlayerName.Text = ""
+PlayerName.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerName.TextScaled = true
+PlayerName.TextSize = 14.000
+PlayerName.TextWrapped = true
+
+-- Scripts:
+
+local function BLPYDCE_fake_script() -- Frame.Tween 
+	local script = Instance.new('LocalScript', Frame)
+
+	wait(6)
+	
+	local frame = script.Parent
+	
+	frame.Visible = true
+	
+	frame:TweenPosition(UDim2.new(0.257, 0,0.196, 0))
+end
+coroutine.wrap(BLPYDCE_fake_script)()
+local function SPYOPHP_fake_script() -- Pfp.LocalScript 
+	local script = Instance.new('LocalScript', Pfp)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	local imageLabel = script.Parent
+	imageLabel.Image = content
+end
+coroutine.wrap(SPYOPHP_fake_script)()
+local function YUEBU_fake_script() -- PlayerName.LocalScript 
+	local script = Instance.new('LocalScript', PlayerName)
+
+	local name = game.Players.LocalPlayer.Name
+	
+	
+	script.Parent.Text = "Welcome To Bacon X Autofarm "..name
+end
+coroutine.wrap(YUEBU_fake_script)()
+local function PSDQ_fake_script() -- Frame.Draggble 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(PSDQ_fake_script)()
