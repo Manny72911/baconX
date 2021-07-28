@@ -1,4 +1,3 @@
-local player = game.Players.LocalPlayer
-
-
-player:Kick('Imainge copying scripts lmaoo, fuck u bro it aint urs its draxe#0001's fuckhead.')
+setclipboard('https://discord.gg/crystalcentral')
+wait(2)
+game:GetService('Players').LocalPlayer:Kick('Stop using skidded ass scripts from my brother clemententine and use crystal central everything working, copied to clipboard.')
